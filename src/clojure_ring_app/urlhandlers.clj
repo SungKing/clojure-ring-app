@@ -54,7 +54,7 @@
                               :model {:id "u-20141123-9091",
                                       :name "Michael"
                                       :courses (get-courses)}}))
-
+  (GET "/hello" [] "<h1>Index page</h1>")
   (POST "/courses" [] (fn [request]
                         (let [params (:params request)]
                           (create-course! {:id (str "c-" (System/currentTimeMillis)),
