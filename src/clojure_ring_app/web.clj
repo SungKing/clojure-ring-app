@@ -31,5 +31,4 @@
                         }))
 
 (defn -main [& args]
-  (if (= "start" (first args))
-    (start-server)))
+    (start-server))
