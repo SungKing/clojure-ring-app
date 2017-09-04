@@ -8,8 +8,8 @@
     [ring.middleware.file :as file]
     [ring.middleware.resource :as resource]
     [ring.middleware.stacktrace :as stacktrace]
-    [cljweb.templating :as templating]
-    [cljweb.urlhandlers :as urlhandlers])
+    [clojure-ring-app.templating :as templating]
+    [clojure-ring-app.urlhandlers :as urlhandlers])
   (:gen-class))
 
 (def app
@@ -22,7 +22,7 @@
       keyword-params/wrap-keyword-params ;; convert parameter name to keyword
       cookies/wrap-cookies ;; get / set cookies
       params/wrap-params   ;; query string and url-encoded form
-      ))
+  ))
 
 ;; start web server
 (defn start-server []
